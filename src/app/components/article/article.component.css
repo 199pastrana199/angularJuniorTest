@@ -1,0 +1,30 @@
+.banner{
+  width: 100%;
+  height: 650px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-title{
+  z-index: 1;
+  font-size: 80px;
+  color: aliceblue;
+}
+
+.banner-background{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: brightness(40%)
+}
+
+.text{
+  display: flex;
+  text-align: center;
+}
+.example-button-row{
+  text-align: center;
+  margin-top: 20px;
+}

@@ -1,0 +1,13 @@
+.links {
+  text-decoration: none;
+  color: black;
+
+}
+a:active{
+  color: blue;
+}
+
+li {
+  padding: 10px 0;
+  cursor: pointer;
+}

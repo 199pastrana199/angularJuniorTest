@@ -1,0 +1,40 @@
+.image{
+  width: 100%;
+  height: 150px;
+  display: flex;
+}
+
+div{
+  text-align: center;
+}
+
+.title{
+  font-size: 30px;
+}
+
+.articles-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.article {
+  height: 100%;
+  width: 24%;
+  margin-bottom: 20px;
+
+}
+
+.mat-card-image {
+  min-height: 200px;
+  max-height: 200px;
+}
+
+.mat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-card-content {
+  flex-grow: 1;
+}

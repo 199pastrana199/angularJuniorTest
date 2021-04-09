@@ -1,0 +1,24 @@
+<div class="articles-table">
+  <div *ngFor="let article of filteredArticles" class="article">
+    <mat-card class="example-card">
+      <img mat-card-image src="{{article.imageUrl}}" alt="article.title">
+
+      <mat-card-header>
+        <mat-card-title>{{article.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{article.shortDescription}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="example-button-row">
+          <button mat-raised-button color="primary" routerLink="/topic/{{article.topicId}}/{{article.id}}">Read more</button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+
+

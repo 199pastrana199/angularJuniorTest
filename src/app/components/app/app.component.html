@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="example-spacer"></span>
+  <div class="example-button-row">
+    <button routerLink="/newPost" mat-raised-button>New Article</button>
+  </div>
+</mat-toolbar>
+<mat-drawer-container class="example-container" [hasBackdrop]="'false'">
+  <mat-drawer #drawer [mode]="'over'">
+    <ul>
+      <app-topic *ngFor="let topic of topics" [topic]="topic" class="links"></app-topic>
+    </ul>
+  </mat-drawer>
+  <mat-drawer-content>
+<router-outlet>
+
+</router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
