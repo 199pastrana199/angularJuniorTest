@@ -19,6 +19,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 const routes: Routes = [
   {path: 'topic/:topicId/:id', component: ArticleComponent},
@@ -48,7 +50,8 @@ const routes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

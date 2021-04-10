@@ -1,28 +1,33 @@
-<mat-form-field appearance="fill">
-  <mat-label>Select topic</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let topic of topics" [value]="topic">
-      {{topic.topic}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-<form>
-  <input type="file" name="safdaff">
-</form>
-<form class="example-form">
+<form class="example-form" [formGroup]="form">
+  <mat-form-field appearance="fill">
+    <mat-label>Select topic</mat-label>
+    <mat-select formControlName="topicId">
+      <mat-option *ngFor="let topic of topics" [value]="topic.topicId">
+        {{topic.topic}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
   <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
+    <mat-label>Photo</mat-label>
+    <input matInput placeholder="Paste link of photo" value="" formControlName="imageUrl">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label></mat-label>
     <mat-label>Title</mat-label>
-    <input matInput placeholder="Ex. Lorem ipsum dolor" value="">
+    <input matInput placeholder="Ex. Lorem ipsum dolor" value="" formControlName="title">
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Write short description</mat-label>
-    <textarea matInput placeholder="Ex. A consequuntur deleniti"></textarea>
+    <textarea matInput formControlName='shortDescription' placeholder="Ex. A consequuntur deleniti"></textarea>
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Write full description</mat-label>
-    <textarea matInput placeholder="Ex. Lorem ipsum dolor"></textarea>
+    <textarea formControlName="description" matInput placeholder="Ex. Lorem ipsum dolor"></textarea>
   </mat-form-field>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" (click)="submit()" type="submit" [disabled]="form.invalid">Save Article
+    </button>
+  </div>
 </form>
-<div class="example-button-row">
-  <button mat-raised-button color="primary">Save Article</button>
-</div>
+

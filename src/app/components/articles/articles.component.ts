@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ArticleService} from '../../services/article.service';
 import {Article} from '../../models/article';
@@ -9,11 +9,13 @@ import {Article} from '../../models/article';
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.css']
 })
-export class ArticlesComponent implements OnInit{
+export class ArticlesComponent implements OnInit {
   articles: Article[];
   filteredArticles: Article[];
+
   constructor(private articlesService: ArticleService, private activatedRoute: ActivatedRoute) {
   }
+
   ngOnInit(): void {
     this.articlesService.getArticles().subscribe(value => {
       this.articles = value;

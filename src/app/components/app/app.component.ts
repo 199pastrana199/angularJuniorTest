@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {TopicService} from '../../services/topic.service';
 import {Topic} from '../../models/topic';
 import {ArticleService} from '../../services/article.service';

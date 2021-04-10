@@ -13,8 +13,9 @@ export class ArticleComponent implements OnInit {
 
   article: Article;
 
-  constructor(private location: Location, private articleService: ArticleService, private activatedRoute: ActivatedRoute ) {
+  constructor(private location: Location, private articleService: ArticleService, private activatedRoute: ActivatedRoute) {
   }
+
   cancel(): void {
     this.location.back();
   }

@@ -1,4 +1,4 @@
-export interface NewArticle{
+export interface NewArticle {
   topic: string;
   imageUrl: string;
   title: string;

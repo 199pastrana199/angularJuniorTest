@@ -1,14 +1,14 @@
-.image{
+.image {
   width: 100%;
   height: 150px;
   display: flex;
 }
 
-div{
+div {
   text-align: center;
 }
 
-.title{
+.title {
   font-size: 30px;
 }
 

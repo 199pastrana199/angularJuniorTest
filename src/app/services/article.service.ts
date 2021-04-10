@@ -17,4 +17,7 @@ export class ArticleService {
   getArticle(id): Observable<Article>{
     return this.httpClient.get<Article>(`http://localhost:3000/article/${id}`);
   }
+  pushArticle(newArticle): Observable<Article>{
+    return this.httpClient.post<Article>('http://localhost:3000/article', newArticle);
+}
 }
